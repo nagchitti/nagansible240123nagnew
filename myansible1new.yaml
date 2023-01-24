@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install ansible httpd
+    apt:
+     name: apache2
+     state: present
+  - name: install git
+    apt:
+     name: git
+     state: present
