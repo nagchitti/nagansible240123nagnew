@@ -16,3 +16,7 @@
 
 [rehatserver]
 172.31.0.13
+
+[webserver:vars]
+webpackageonubuntu=apache2
+webpackonredhat=httpd
