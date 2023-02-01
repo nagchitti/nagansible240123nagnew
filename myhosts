@@ -18,5 +18,5 @@
 172.31.0.13
 
 [webserver:vars]
-webpackageonubuntu=apache222
+webpackageonubuntu=apache2
 webpackonredhat=httpd
