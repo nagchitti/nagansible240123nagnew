@@ -1,0 +1,25 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: i want to install java on ubuntu ansible nodes
+    apt:
+     name: openjdk-8-jdk
+     state: present
+    when: ansible_os_family =="Debian"
+  - name: i want to start my java on nodes by using ubuntu
+    service:
+     name: openjdk-8-jdk
+     state: started
+    when: ansible_os_family =="Debian"
+
+  - name: i want to install java on redhat ansible nodes
+    yum:
+     name: jdk-8uversion-linux-x64.rpm
+     state: present
+    when: ansible_os_family =="RedHat"
+  - name: i want to start my java on nodes by using redhat
+    service:
+     name: jdk-8uversion-linux-x64.rpm
+     state: started
+    when: ansible_os_family =="RedHat"
