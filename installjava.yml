@@ -1,7 +1,6 @@
 ---
 - hosts: mywebserver
-  become: yes
-    
+  become: yes  
   - name: i want to install java on redhat ansible nodes
     yum:
      name: "{{myjavaredhat}}"
