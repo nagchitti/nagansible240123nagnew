@@ -7,4 +7,9 @@
      name: "{{javaubuntu}}"
      state: present
     when: ansible_os_family =="Debian"
-    
+  - name: Install Java 8 on Red Hat
+  become: yes
+  yum:
+    name: java-1.8.0-openjdk
+    state: present
+
