@@ -4,22 +4,22 @@
   tasks:
   - name: i want to install java on ubuntu ansible nodes
     apt:
-     name: openjdk-8-jdk
+     name: "{{javaubuntu}}"
      state: present
     when: ansible_os_family =="Debian"
   - name: i want to start my java on nodes by using ubuntu
     service:
-     name: openjdk-8-jdk
+     name: "{{javaubuntu}}"
      state: started
     when: ansible_os_family =="Debian"
 
   - name: i want to install java on redhat ansible nodes
     yum:
-     name: jdk-8uversion-linux-x64.rpm
+     name: "{{javaredhat}}"
      state: present
     when: ansible_os_family =="RedHat"
   - name: i want to start my java on nodes by using redhat
     service:
-     name: jdk-8uversion-linux-x64.rpm
+     name: "{{javaredhat}}"
      state: started
     when: ansible_os_family =="RedHat"
