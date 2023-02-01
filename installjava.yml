@@ -4,11 +4,12 @@
   tasks:
   - name: i want to install java on ubuntu ansible nodes
     apt:
-     name: "{{javaubuntu}}"
+     name: "{{myjavaubuntu}}"
      state: present
     when: ansible_os_family =="Debian"
-  - name: Install Java 8 on Red Hat
+    
+  - name: i want to install java on redhat ansible nodes
     yum:
-     name: java-1.8.0-openjdk
+     name: "{{myjavaredhat}}"
      state: present
-
+    when: ansible_os_family =="RedHat"
